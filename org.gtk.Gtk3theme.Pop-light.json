@@ -1,0 +1,47 @@
+{
+  "id": "org.gtk.Gtk3theme.Pop-light",
+  "branch": "3.22",
+  "runtime": "org.gnome.Sdk",
+  "build-extension": true,
+  "sdk": "org.gnome.Sdk",
+  "runtime-version": "3.24",
+  "appstream-compose": false,
+  "separate-locales": false,
+  "modules": [
+    {
+      "name": "Pop",
+      "buildsystem": "simple",
+      "build-commands": [
+        "ar x pop-gtk-theme.deb",
+        "tar -xf data.tar.xz",
+
+        "install -dm755 /usr/share/runtime/share/themes/Pop-light/gtk-3.0",
+        "cp -aL usr/share/themes/Pop-light/gtk-3.22/* /usr/share/runtime/share/themes/Pop-light/gtk-3.0",
+        "cp -a usr/share/themes/Pop-light/index.theme /usr/share/runtime/share/themes/Pop-light"
+      ],
+      "sources": [
+        {
+            "type": "file",
+            "url": "https://github.com/system76/pop-gtk-theme/releases/download/2.0.6-4/pop-gtk-theme_2.0.6.4_all.deb",
+            "dest-filename": "pop-gtk-theme.deb",
+            "sha256": "8ab13fe56305d87fe1f6b4c4388e978e66f7c7d2c39fb92031697afd97a8463f"
+        }
+      ]
+    },
+    {
+      "name": "appdata",
+      "buildsystem": "simple",
+      "build-commands": [
+        "mkdir -p ${FLATPAK_DEST}/share/appdata",
+        "cp org.gtk.Gtk3theme.Pop-light.appdata.xml ${FLATPAK_DEST}/share/appdata",
+        "appstream-compose --basename=org.gtk.Gtk3theme.Pop-light --prefix=${FLATPAK_DEST} --origin=flatpak org.gtk.Gtk3theme.Pop-light"
+      ],
+      "sources": [
+        {
+          "type": "file",
+          "path": "org.gtk.Gtk3theme.Pop-light.appdata.xml"
+        }
+      ]
+  }
+  ]
+}
