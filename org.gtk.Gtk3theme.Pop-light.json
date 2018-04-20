@@ -22,9 +22,9 @@
       "sources": [
         {
             "type": "file",
-            "url": "https://launchpad.net/~system76/+archive/ubuntu/pop/+files/pop-gtk-theme_3.0.2+1514583282+17.10~0a13823_all.deb",
+            "url": "https://launchpad.net/~system76/+archive/ubuntu/pop/+files/pop-gtk-theme_3.1.1~1523554988~18.04~7a80023_all.deb",
             "dest-filename": "pop-gtk-theme.deb",
-            "sha256": "32d24e2ad6c8495f431c1351b568bbb7d778b4b0c0bc73fdf3fd36d911c05d94"
+            "sha256": "df25878eb18dab65af2dccc5271b51eb5f235bf2be9825cef36c6aa76ebc9a78"
         }
       ]
     },
