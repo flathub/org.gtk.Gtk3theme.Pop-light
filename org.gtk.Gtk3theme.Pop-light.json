@@ -4,7 +4,7 @@
   "runtime": "org.freedesktop.Platform",
   "build-extension": true,
   "sdk": "org.freedesktop.Sdk",
-  "runtime-version": "1.6",
+  "runtime-version": "18.08",
   "appstream-compose": false,
   "separate-locales": false,
   "modules": [
@@ -22,9 +22,9 @@
       "sources": [
         {
             "type": "file",
-            "url": "https://launchpad.net/~system76/+archive/ubuntu/pop/+files/pop-gtk-theme_4.0.1~1544462177~18.10~87ccad6_all.deb",
+            "url": "https://launchpad.net/~system76/+archive/ubuntu/pop/+files/pop-gtk-theme_4.1.3~1550077073~18.10~dac4908_all.deb",
             "dest-filename": "pop-gtk-theme.deb",
-            "sha256": "9eaf5c618da462e2a74a97273a4ae87c31b61d6e68fd1d02adbced7cf17f80c9"
+            "sha256": "088f55ad3d4f239e33772e44e48f47173abc67a1a3326a4e028cd430b6346a5e"
         }
       ]
     },
